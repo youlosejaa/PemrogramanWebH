@@ -1,0 +1,93 @@
+/* Styling untuk body */
+body {
+    background: linear-gradient(135deg, #3a5187, #e0eafc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Styling untuk container pemilihan aplikasi */
+.app-selection {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-selection:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling judul */
+.app-selection h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #111111;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Styling tombol */
+.buttons {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.app-button {
+    text-decoration: none;
+    background: transparent;
+    color: #101214;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #fff;
+    transition: all 0.4s ease;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.app-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6a93ff, #ff5e8d);
+    z-index: -1;
+    transition: transform 0.5s ease-in-out;
+    transform: scale(0);
+    transform-origin: center;
+    border-radius: 50px;
+}
+
+.app-button:hover::before {
+    transform: scale(1.2);
+}
+
+.app-button:hover {
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
